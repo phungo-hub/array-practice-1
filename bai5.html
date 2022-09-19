@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+  <label>Nhập số: <input type="text" id="input"></label>
+  <button type="button" onclick="add()">Add</button>
+  <button type="button" onclick="countNegative()">Đếm số âm</button>
+  <p id="result"></p>
+<script>
+  let arr = [];
+  let count = 0;
+  function add(){
+    let input = parseInt(document.getElementById('input').value);
+    arr.push(input)
+    document.getElementById('input').value = ""
+  }
+
+  function countNegative() {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        count += 1
+      }
+    }
+    document.getElementById('result').innerHTML = "Số lượng số âm trong dãy " + JSON.stringify(arr) + " : " + count
+  }
+
+
+</script>
+</body>
+</html>

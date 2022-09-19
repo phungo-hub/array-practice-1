@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+  <label>Nhập số: <input type="text" id="input"></label>
+  <button type="button" onclick="add()">Add</button>
+  <button type="button" onclick="checkV()">Check số</button>
+  <p id="result"></p>
+<body>
+<script>
+  let arr = [];
+  function add(){
+    let input = document.getElementById('input').value;
+    arr.push(input)
+    document.getElementById('input').value = ""
+  }
+
+  function checkV() {
+      let v = prompt("Kiếm tra nếu số có thuộc mảng")
+      if (arr.indexOf(v) !== -1) {
+          alert("V is in the array")
+      } else {
+          alert("V is not in the array")
+      }
+  }
+</script>
+</body>
+</html>

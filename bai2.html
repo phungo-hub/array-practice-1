@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+      let n = + prompt("Nhập số phần tử thứ " + (i+1));
+      if (arr.includes(n)) {
+          let newN = +prompt("Số bị trùng, vui lòng nhập lại phần tử thứ " + (i+1));
+          arr.push(newN)
+      } else {
+        arr.push(n)
+      }
+  }
+
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+      if(arr[i] > arr[i-1]) {
+          max = arr[i]
+      }
+  }
+  document.write("Số lớn nhất trong dãy: " + max)
+
+</script>
+</body>
+</html>
